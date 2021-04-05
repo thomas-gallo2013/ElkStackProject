@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Path to Topology: github.com/[username]/ElkStackProject/tree/Images/'2021-03-28 Network Topology - gallo'
+Path to Topology: github.com/thomas-gallo2013/ElkStackProject/tree/Images/'2021-03-28 Network Topology - gallo'
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -61,7 +61,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 |     [your-IP]        |
+| Jump Box | Yes                 |   whitelisted IP     |
 |  web-1   | No                  |     10.0.0.4         |
 |  web-2   | No                  |     10.0.0.4         |
 | DVWA-VM3 | No                  |     10.0.0.4         |
@@ -82,7 +82,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-ElkStackProject/Images/'20210-03-28 elkstack container elkserver - gallo.jpg'
+ElkStackProject/Images/'2021-03-28 elkstack container elkserver - gallo.jpg'
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -103,5 +103,5 @@ SSH into the control node and follow the steps below:
 	ensure specify which server you will be running each playbook on through the 'ansible-playbook [header] <name of playbook.yml>'
 - Update the hosts file to include the appropriate subnet IPs for the target machines you wish to install the elk container
 	ensure as well to include all desired hosts for the various 'beats' you may install into your subnetwork.  This/these will be different than your elkserver.
-- Run the playbook, and navigate to the browser web page: [public IP of Elk Server]:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook, and navigate to the browser web page: *Your public IP of Elk Server*:5601/app/kibana to check that the installation worked as expected.
 
